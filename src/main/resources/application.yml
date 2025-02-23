@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-actuator
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_actuator
+    username: root
+    password: 1234
+
+
+
+management:
+  endpoint:
+    health:
+      cache:
+        time-to-live: 3s
+  endpoints:
+    web:
+        exposure:
+          include: "*"
+          exclude:
+            - beans
+            - conditions
+            - configprops-prefix
+
+        cors:
+          allowed-origins: "https://test.com"
