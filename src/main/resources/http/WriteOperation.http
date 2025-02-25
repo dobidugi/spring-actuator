@@ -1,0 +1,8 @@
+### WriteOperation Test
+
+POST http://localhost:8080/actuator/myLibrary
+Content-Type: application/json
+
+{
+  "value":  "메롱"
+}
