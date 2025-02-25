@@ -12,8 +12,10 @@ spring:
 management:
   endpoint:
     health:
+      show-details: always
       cache:
         time-to-live: 3s
+      show-components: always
   endpoints:
     web:
         exposure:
